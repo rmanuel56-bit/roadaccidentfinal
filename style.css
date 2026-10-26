@@ -1,0 +1,128 @@
+
+/* =====================================
+   RACC DASHBOARD - BABY BLUE THEME
+   ===================================== */
+
+/* Main dashboard background */
+.stApp {
+    background-color: #EAF6FF !important;
+}
+
+/* Main content area */
+[data-testid="stMain"] {
+    background-color: #EAF6FF !important;
+}
+
+/* Center the main dashboard content */
+[data-testid="stMainBlockContainer"] {
+    max-width: 1400px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-top: 2rem !important;
+}
+
+/* Sidebar background */
+[data-testid="stSidebar"] {
+    background-color: #D7EEFF !important;
+}
+
+/* Main navigation container */
+[data-testid="stMain"] [data-testid="stRadio"] {
+    width: 100% !important;
+    margin: 15px auto 25px auto !important;
+}
+
+/* Keep all navigation buttons in one straight row */
+[data-testid="stMain"] [data-testid="stRadio"] div[role="radiogroup"] {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+}
+
+/* Navigation buttons */
+[data-testid="stMain"] [data-testid="stRadio"] div[role="radiogroup"] label {
+    flex: 0 1 auto !important;
+    white-space: nowrap !important;
+    background-color: #FFFFFF !important;
+    border: 1px solid #B7DDF7 !important;
+    border-radius: 10px !important;
+    padding: 11px 16px !important;
+    margin: 0 !important;
+    min-height: 42px !important;
+    justify-content: center !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Navigation text */
+[data-testid="stMain"] [data-testid="stRadio"] div[role="radiogroup"] label p {
+    color: #174A70 !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+}
+
+/* Hover effect */
+[data-testid="stMain"] [data-testid="stRadio"] div[role="radiogroup"] label:hover {
+    background-color: #D9EEFF !important;
+    border-color: #65B5E8 !important;
+}
+
+/* Selected navigation button */
+[data-testid="stMain"] [data-testid="stRadio"] div[role="radiogroup"] label:has(input:checked) {
+    background-color: #70B9E8 !important;
+    border-color: #70B9E8 !important;
+    box-shadow: 0 3px 8px rgba(48, 126, 180, 0.15) !important;
+}
+
+/* Selected navigation text */
+[data-testid="stMain"] [data-testid="stRadio"] div[role="radiogroup"] label:has(input:checked) p {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+}
+
+/* Hide radio circles */
+[data-testid="stMain"] [data-testid="stRadio"] div[role="radiogroup"] label > div:first-child {
+    display: none !important;
+}
+
+/* Remove excess space from radio options */
+[data-testid="stMain"] [data-testid="stRadio"] div[role="radiogroup"] label > div {
+    align-items: center !important;
+}
+
+/* Navigation divider */
+.navigation-divider {
+    border-bottom: 1px solid #C5E3F8;
+    margin: 0 0 25px 0;
+}
+
+/* Dashboard headings */
+[data-testid="stMain"] h1,
+[data-testid="stMain"] h2,
+[data-testid="stMain"] h3 {
+    color: #174A70 !important;
+}
+
+/* Cards and bordered containers */
+[data-testid="stMain"] [data-testid="stVerticalBlockBorderWrapper"] {
+    border-color: #C5E3F8 !important;
+    border-radius: 12px !important;
+}
+
+/* Mobile screens: allow scrolling rather than wrapping */
+@media (max-width: 900px) {
+    [data-testid="stMain"] [data-testid="stRadio"] div[role="radiogroup"] {
+        justify-content: flex-start !important;
+        overflow-x: auto !important;
+        padding-bottom: 8px !important;
+    }
+
+    [data-testid="stMain"] [data-testid="stRadio"] div[role="radiogroup"] label {
+        flex-shrink: 0 !important;
+        padding: 9px 12px !important;
+    }
+}
